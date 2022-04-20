@@ -41,7 +41,7 @@ class UrlOpener:
 
     def alert_check(self):
         try:
-            self.driver.switch_to().alert()
+            self.driver.switch_to().alert().accept()
             return True
         except:
             return False

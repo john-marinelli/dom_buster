@@ -26,11 +26,14 @@ def main():
     if xpath is not None:
         input_tester.pre_xpath(xpath)
     
+    #debugging loop to display inputs to stdout
     for input in input_fields:
         if input.is_displayed() and input.is_enabled():
             print(input.get_attribute("id"))
             input_ids.append(str(input.get_attribute("id")))
 
+    #main loop that gets current inputs, checks if they're "hidden"
+    #then proceeds to enter payloads and return to the original url
     for i in range(num_inputs):
         curr_input = input_fields[i]
         if curr_input.is_displayed() and curr_input.is_enabled():
@@ -38,6 +41,9 @@ def main():
                 curr_input = input_fields[i]
                 curr_input.send_keys(payload)
                 curr_input.submit()
+                #try catch is for a selenium quirk where WebDriverWait stalls
+                #and crashes the program if an alert pops up
+                #This seems to work to log alerts
                 try:
                     WebDriverWait(input_tester.get_driver(), 3).until(EC.alert_is_present(), "")
                     alert = input_tester.get_driver().switch_to.alert

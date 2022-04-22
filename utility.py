@@ -37,5 +37,5 @@ def open_payloads(path="res/xss-payload-list.txt"):
 #         file.writelines(lines)
 
 
-if __name__ == "__main__":
-    data_culling()
+# if __name__ == "__main__":
+#     # data_culling()

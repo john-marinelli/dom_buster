@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from urllib.parse import urlparse, parse_qsl
 
 #This class needs to be refactored to accurately reflect what it does
 #I'm planning on doing some organizational work on it, but it does

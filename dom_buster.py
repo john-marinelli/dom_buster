@@ -3,13 +3,14 @@ from utility import open_payloads, help_open
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlunparse, urlparse, urlencode
 
 
 #TODO switch over input display and selection to selenium
 #TODO incorporate URL parameters 
 def main():
     #test link -- doesn't currently work
-    url = "https://facebook.com"
+    url = "https://ac561f4b1f6e6351c048500a00b100df.web-security-academy.net/?search=help"
     xpath = None
     #instantiating the selenium driver class that handles most things
     input_tester = UrlOpener(url)

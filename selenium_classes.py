@@ -34,7 +34,11 @@ class UrlOpener:
         return self.driver
     
     def pre_xpath(self, xpath):
-        
+        #this function is meant to allow the program to click on a button 
+        #before entering input everytime the page loads
+        #This is for more complex webpages (e.g. AirBnB's site)
+        #that have a static url, but require a button press before 
+        #input
         button = self.driver.find_elements_by_xpath(xpath)
         button.click()
 

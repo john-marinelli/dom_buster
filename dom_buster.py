@@ -8,12 +8,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 #TODO switch over input display and selection to selenium
 #TODO incorporate URL parameters 
 def main():
-    url = "https://ac501f3c1fc190c5c08d0ee300490084.web-security-academy.net/"
+    #test link -- doesn't currently work
+    url = "https://facebook.com"
     xpath = None
+    #instantiating the selenium driver class that handles most things
     input_tester = UrlOpener(url)
+    #This is the file open function in utility
     # payloads = open_payloads()
     payloads = [r"hello", r"123", r"test", r'"><script>alert("hello")</script>', r'anotherone']
 
+    #initially load url that your testing will be based on
     input_tester.load_url(url)    
     input_fields = input_tester.list_inputs()
     num_inputs = len(input_fields)

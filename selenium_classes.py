@@ -3,10 +3,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-#TODO filter stdout to reduce visual clutter and useless error messages
-#this seems to work, but gets rid of the ability to ctrl+c to quit the session
-# options = webdriver.ChromeOptions()
-# options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#This class needs to be refactored to accurately reflect what it does
+#I'm planning on doing some organizational work on it, but it does
+#work as intended currently
 
 
 class UrlOpener:

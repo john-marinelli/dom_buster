@@ -17,22 +17,24 @@ class UrlOpener:
         self.driver = webdriver.Chrome()
         self.home_url = home_url
     
+    #opens url passed at url parameter
     def load_url(self, url):
         self.driver.get(url)
-    
+
+    #Opens Given home url
     def open_home(self):
         self.driver.get(self.home_url)
-
-    def visit_url(self, url):
-        self.driver.get()
     
+    #Gets all web element objects of inputs on the page, and returns them. (Input boxes like email, pass, name, etc...)
     def list_inputs(self):
         inputs = self.driver.find_elements_by_tag_name("input")
         return inputs
 
+    #Returns driver object 
     def get_driver(self):
         return self.driver
     
+    #Gets xpath for browser navigation to get to inputs
     def pre_xpath(self, xpath):
         #this function is meant to allow the program to click on a button 
         #before entering input everytime the page loads
@@ -41,11 +43,4 @@ class UrlOpener:
         #input
         button = self.driver.find_elements_by_xpath(xpath)
         button.click()
-
-    def alert_check(self):
-        try:
-            self.driver.switch_to().alert().accept()
-            return True
-        except:
-            return False
 

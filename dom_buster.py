@@ -13,7 +13,7 @@ helpInfo ="""
    Custom payloads can be used by utilizing the custom xss list flag as described below and passing the path to the file.
    *WARNING*: All custom xss files should have each xss input on its own line, otherwise undefined behavior can occur.
 
-   WARNING: Should NOT be tested on websites you do not own or not set up for such purposes for obvious ethical reasons! 
+   WARNING: Should NOT be tested on websites you do not own or are not set up for such purposes for obvious ethical reasons! 
    
    Please use responsibly.
 
@@ -72,6 +72,9 @@ helpInfo ="""
 #Notes:
 #Google Driver for selenium should be placed in C drive.
 #Firefox Driver requires path setup.
+#TODO For chromedriver/geckodriver install on Windows we should recommend using Chocolatey
+#TODO For chromedriver/geckodriver install on Mac we should recommend homebrew
+#TODO For debian/arch/etc linux I need to check yum, pacman and apt to find out
 from ast import arguments
 from sre_constants import SUCCESS
 import sys

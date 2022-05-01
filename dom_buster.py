@@ -3,8 +3,8 @@
 #Last Updated: 04/21/2022
 #Program Purpose:
 helpInfo ="""
-   This program is an input fuzzer for input boxes on websites. 
-   It tests all the inputs on the webpage for crossite scripting vulnerabilities.
+   This program is an fuzzer for input boxes on websites. 
+   It tests all the inputs on the webpage for cross-site scripting vulnerabilities.
    It does so by cycling through a list of payloads and inputting them into all  
    the active and displayed input fields on the webpage and checking for an alert box.  
    

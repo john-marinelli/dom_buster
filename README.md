@@ -53,7 +53,7 @@ You must make sure that your chrome version matches the chromedriver version you
 
 After downloading:
 
-On linux make sure you make the file executable, then add it to ~/bin and to your path.
+On Linux make sure you make the file executable, then add it to ~/bin and to your path.
 
 On Mac OS, move the executable to /usr/local/bin.
 

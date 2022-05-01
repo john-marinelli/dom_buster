@@ -3,10 +3,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-#TODO filter stdout to reduce visual clutter and useless error messages
-#this seems to work, but gets rid of the ability to ctrl+c to quit the session
-# options = webdriver.ChromeOptions()
-# options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#This class needs to be refactored to accurately reflect what it does
+#I'm planning on doing some organizational work on it, but it does
+#work as intended currently
 
 
 class UrlOpener:
@@ -18,31 +17,30 @@ class UrlOpener:
         self.driver = webdriver.Chrome()
         self.home_url = home_url
     
+    #opens url passed at url parameter
     def load_url(self, url):
         self.driver.get(url)
-    
+
+    #Opens Given home url
     def open_home(self):
         self.driver.get(self.home_url)
-
-    def visit_url(self, url):
-        self.driver.get()
     
+    #Gets all web element objects of inputs on the page, and returns them. (Input boxes like email, pass, name, etc...)
     def list_inputs(self):
         inputs = self.driver.find_elements_by_tag_name("input")
         return inputs
 
+    #Returns driver object 
     def get_driver(self):
         return self.driver
     
+    #Gets xpath for browser navigation to get to inputs
     def pre_xpath(self, xpath):
-        
+        #this function is meant to allow the program to click on a button 
+        #before entering input everytime the page loads
+        #This is for more complex webpages (e.g. AirBnB's site)
+        #that have a static url, but require a button press before 
+        #input
         button = self.driver.find_elements_by_xpath(xpath)
         button.click()
-
-    def alert_check(self):
-        try:
-            self.driver.switch_to().alert().accept()
-            return True
-        except:
-            return False
 

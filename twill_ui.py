@@ -3,7 +3,9 @@ from twill import browser
 from twill.namespaces import get_twill_glocals
 from twill import __url__
 
-
+#Currently not being used -- from an old iteration
+#of the program that used a CLI interface to select
+#inputs
 
 
 class FormGrabber:

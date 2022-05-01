@@ -43,6 +43,7 @@ brew --cask install chromedriver
 On Debian based Linux distributions, you can find chromedriver on apt:
 
 ```
+
 sudo apt install chromium-chromedriver
 
 ```

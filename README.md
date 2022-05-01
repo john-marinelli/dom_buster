@@ -12,7 +12,7 @@ Dom Buster does not require any access to your code base.
 
 Dom Buster uses Selenium and chromedriver to search and interact with webpages. In order to start using the program, you must install both of these.
 
-# To install Selenium:
+### To install Selenium:
 
 ```
 
@@ -20,7 +20,7 @@ pip3 install selenium
 
 ```
 
-# To get chromedriver, we recommend using a package manager for a quick and easy install. 
+### To get chromedriver, we recommend using a package manager for a quick and easy install. 
 
 
 On Windows you can use Chocolatey:
@@ -48,7 +48,7 @@ sudo apt install chromium-chromedriver
 
 ```
 
-# Manual install:
+### Manual install:
 
 One issue with using a package manager is that some versions of chromedriver they distribute may lag behind chrome updates.
 You must make sure that your chrome version matches the chromedriver version you download. If a chromedriver download from one of these package managers is of the incorrect version, you can always find the latest at https://chromedriver.chromium.org/.

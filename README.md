@@ -20,9 +20,10 @@ pip3 install selenium
 
 ```
 
-To install chromedriver:
+To get chromedriver, we recommend using a package manager for a quick and easy install. 
 
-On Windows, we recommend using Chocolatey, a package manager:
+
+On Windows you can use Chocolatey:
 
 ```
 
@@ -39,7 +40,17 @@ brew --cask install chromedriver
 
 ```
 
-On Linux, you may find chromedriver on many major package managers:
+On Debian based Linux distributions, you can find chromedriver on apt:
 
+```
+sudo apt install chromium-chromedriver
 
+```
 
+One issue with this install method is that some package managers can lag behind Chrome updates. 
+You must make sure that your chrome version matches the chromedriver version you download. If a chromedriver download from one of these package managers is of the incorrect version, you can always find the latest at https://chromedriver.chromium.org/.
+
+After downloading:
+On linux make sure you make the file executable, then add it to ~/bin and to path. 
+On Mac OS, move the executable to /usr/local/bin. 
+On Windows, move the executable to C:\Windows.

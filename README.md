@@ -51,6 +51,7 @@ One issue with this install method is that some package managers can lag behind 
 You must make sure that your chrome version matches the chromedriver version you download. If a chromedriver download from one of these package managers is of the incorrect version, you can always find the latest at https://chromedriver.chromium.org/.
 
 After downloading:
+
 On linux make sure you make the file executable, then add it to ~/bin and to path.
 
 On Mac OS, move the executable to /usr/local/bin.

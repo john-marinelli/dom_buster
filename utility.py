@@ -1,5 +1,6 @@
 import webbrowser
 import re
+import textwrap
 
 #Utility file for various helper functions
 
@@ -16,27 +17,10 @@ def open_payloads(path="res/xss-payload-list.txt"):
         payloads[i] = payloads[i].strip()
     return payloads
 
+def import_help_string():
+    with open("res/help_info.txt") as file:
+        help_info = file.read()
+    return help_info
 
-#function to cull data to find only payloads with "alert" in them
-# def data_culling():
-#     lines = []
-#     to_find = re.compile("alert")
-#     j = 0
-#     #TODO RE of 'alert' instead of is "" in
-#     with open("res/xss-payload-list.txt") as file:
-#         lines = file.readlines()
-
-#     while j < len(lines):
-
-#         if :
-#             lines.pop(j)
-        
-#         j += 1
-    
-#     with open("res/culled_xss_list.txt", "w") as file:
-#         file.writelines(lines)
-
-
-if __name__ == "__main__":
-    pass
-    #data_culling()
+def print_help(help_info):
+    print(textwrap.dedent(help_info))

@@ -2,16 +2,8 @@
 #Univeristy of Colorado: Denver
 #Last Updated: 04/21/2022
 #Program Purpose:
-#This program is mean to weed out DOM XSS vulnerabilities in websites through input fuzzing. 
+#This program is meant to weed out DOM XSS vulnerabilities in websites through input fuzzing. 
 
-
-
-#Notes:
-#Google Driver for selenium should be placed in C drive.
-#Firefox Driver requires path setup.
-#TODO For chromedriver/geckodriver install on Windows we should recommend using Chocolatey
-#TODO For chromedriver/geckodriver install on Mac we should recommend homebrew
-#TODO For debian/arch/etc linux I need to check yum, pacman and apt to find out
 from ast import arguments
 from sre_constants import SUCCESS
 import sys
@@ -27,7 +19,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 def main(url_path, xpath_val=None, xpath_flag = False, list_val="res/xss-payload-list.txt", list_flag=False, test=False, speed_val=3):
-    #
+    #Setting up url and xpath
     url = url_path
     xpath = xpath_val.strip('"')
 

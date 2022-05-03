@@ -19,7 +19,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 def main(url_path, xpath_val=None, xpath_flag = False, list_val="res/xss-payload-list.txt", list_flag=False, test=False, speed_val=3):
-    #
+    #Setting up url and xpath
     url = url_path
     xpath = xpath_val
 

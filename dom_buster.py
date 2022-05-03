@@ -3,14 +3,14 @@ from utility import open_payloads, help_open
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlunparse, urlparse, urlencode
+from urllib.parse import urlsplit, urlunsplit, parse_qs, urlunparse, urlparse, urlencode
 
 
 #TODO switch over input display and selection to selenium
 #TODO incorporate URL parameters 
 def main():
     #test link -- doesn't currently work
-    url = "https://ac561f4b1f6e6351c048500a00b100df.web-security-academy.net/?search=help"
+    url = "https://google.com"
     xpath = None
     #instantiating the selenium driver class that handles most things
     input_tester = UrlOpener(url)
@@ -23,6 +23,17 @@ def main():
     input_fields = input_tester.list_inputs()
     num_inputs = len(input_fields)
     input_ids = []
+
+    #parsing url, pulling parameters
+    parsed_url = urlparse(url)
+    parsed_queries = parse_qs(parsed_url.query)
+
+    for key in parsed_queries:
+        for payload in payloads:
+            prev_query = parsed_queries[key]
+            parsed_queries[key] = payload
+            split = urlsplit(url)
+            unsplit_url = url
 
     if xpath is not None:
         input_tester.pre_xpath(xpath)

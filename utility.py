@@ -18,7 +18,7 @@ def open_payloads(path="res/xss-payload-list.txt"):
     return payloads
 
 def import_help_string():
-    with open("res/help_info.txt") as file:
+    with open("res/help_info.txt", encoding='utf-8') as file:
         help_info = file.read()
     return help_info
 

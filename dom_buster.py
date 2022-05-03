@@ -18,7 +18,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 
-def main(url_path, xpath_val=None, xpath_flag = False, list_val="res/xss-payload-list.txt", list_flag=False, test=False, speed_val=3):
+def main(url_path, xpath_val=None, xpath_flag = False, list_val="res/default_dom_list.txt", list_flag=False, test=False, speed_val=3):
     #Setting up url and xpath
     url = url_path
     xpath = xpath_val
@@ -35,7 +35,7 @@ def main(url_path, xpath_val=None, xpath_flag = False, list_val="res/xss-payload
     if test:
         payloads = [r"hello", r"123", r"test", r'"><script>alert("hello")</script>', r'anotherone']
     else:
-        payloads = open_payloads(list_path)
+        payloads = open_payloads(list_val)
 
     #initially load url for input fuzzing
     input_tester.load_url(url)    
@@ -159,6 +159,9 @@ if __name__ == "__main__":
     #     main(url,xpath,xpath_flag)
     # elif url != "":
     #     main(url)
+
+    if (list_path == ""):
+        list_path = "res/default_dom_list.txt"
     if help_flag:
         print_help(help_info)
     elif url_flag and url != "":

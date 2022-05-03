@@ -41,6 +41,6 @@ class UrlOpener:
         #This is for more complex webpages (e.g. AirBnB's site)
         #that have a static url, but require a button press before 
         #input
-        button = self.driver.find_elements_by_xpath(xpath)
+        button = self.driver.find_element_by_xpath(xpath)
         button.click()
 

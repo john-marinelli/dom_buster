@@ -62,3 +62,44 @@ On Mac OS, move the executable to /usr/local/bin.
 On Windows, move the executable to C:\Windows. 
 
 ## Usage:
+
+### To get help info:
+
+python3 dom_buster.py -h
+
+    or
+
+python3 dom_buster.py --help
+
+### Run dom_buster on url (no xpath): 
+
+python3 dom_buster --u=Your_Url_Path
+    or
+python3 dom_buster --url=Your_Url_Path
+    or
+python3 dom_buster --URL=Your_Url_Path
+
+### Run dom_buster on url with xpath:
+
+python3 dom_buster --u=Your_Url_Path --x=Your_Xpath
+    or
+python3 dom_buster --url=Your_Url_Path --xpath=Your_Xpath
+    or
+python3 dom_buster --URL=Your_Url_Path --XPATH=Your_Xpath
+
+
+### Use Custom xss list (xpath flag also allowed with these calls)
+
+python3 dom_buster --u=Your_Url_Path --l=res/path_to_xss_textfile
+    or
+python3 dom_buster --url=Your_Url_Path --list=res/path_to_xss_textfile
+    or
+python3 dom_buster --URL=Your_Url_Path --LIST=res/path_to_xss_textfile
+
+### Parameters and Options: 
+
+-h : help -description of program use, parameters, and options.
+--url=, --u= : url parameter -Url path to the website to run the payload injection on.
+--xpath=,--x= : [Optional] xpath parameter -Path to the element if input fields is embedded behind buttons or routing. Can be found by copying the xpath from the webpages source code in the browser's inspect tool.
+--l, --list, --LIST : [Optional] custom xss list parameter: -Path to the text file that holds the custom xss calls you'd like to try on the input boxes
+

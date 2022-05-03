@@ -66,9 +66,7 @@ On Windows, move the executable to C:\Windows.
 ### To get help info:
 
 python3 dom_buster.py -h
-
     or
-
 python3 dom_buster.py --help
 
 ### Run dom_buster on url (no xpath): 

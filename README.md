@@ -103,3 +103,6 @@ python3 dom_buster --URL=Your_Url_Path --LIST=res/path_to_xss_textfile
 --xpath=,--x= : [Optional] xpath parameter -Path to the element if input fields is embedded behind buttons or routing. Can be found by copying the xpath from the webpages source code in the browser's inspect tool.
 --l, --list, --LIST : [Optional] custom xss list parameter: -Path to the text file that holds the custom xss calls you'd like to try on the input boxes
 
+## Video on usage and purpose:
+
+https://www.youtube.com/watch?v=JB-oG6SSUuM
